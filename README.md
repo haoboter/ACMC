@@ -9,10 +9,10 @@ The pipeline has three stages: learn elementary **behavior models** (digital twi
 | `Exp/` | Deployment of a trained policy on the physical setup (camera, coil, optional human-in-the-loop variant). |
 Bundled vendor SDKs (not installed via pip): **Sensory 826** DAQ (`S826.py`, `sdk_826_*`) and **Daheng Imaging** camera API (`gxipy/`).
 ## Typical workflow
-1. **Behavior modeling** — Run active-learning scripts under `Elementar_behavior_modeling/code/{milli,nano,reconfig}/`, or offline training via `code/offline/train_offline.py` when labeled Excel data is available.
-2. **Simulated RL** — Place trained twin weights under `Independent cross-scale coordination/SL_model/AL_all/` (`milli_velocity.pth`, `nano_velocity.pth`, `release_grayscale.pth`), then train with `main_RL.py`.
-3. **Hardware experiments** — Copy RL checkpoints into `Exp/agent/` and run `main_exp.py` (or `main_exp_human.py`). Real-world perception uses a YOLO weights file (`best.pt`) in the `Exp/` working directory.
-> **Note:** Pretrained weights, training datasets (`.xlsx`), and `SL_model/` checkpoints are not shipped with this repository and must be produced or supplied locally.
+1. **Behavior modeling** — Run active-learning scripts under `Elementar_behavior_modeling/code/{milli,nano,reconfig}/`.
+2. **Simulated RL** — Place trained twin weights under `Independent cross-scale coordination/SL_model/` (`milli_velocity.pth`, `nano_velocity.pth`, `release_grayscale.pth`), then train with `main_RL.py`.
+3. **Hardware experiments** — Copy RL checkpoints into `Exp/agent/` and run `main_exp.py`. Real-world perception uses a YOLO weights file (`best.pt`) in the `Exp/` working directory.
+
 ## Dependencies
 ### Python (install via pip)
 Core stack used across modules:
