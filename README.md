@@ -1,7 +1,6 @@
 # ACMC
-
 Automatic Cross-scale Modular Coordination (ACMC) is the codebase for the
-CrossBot study, "Miniature cross-scale magnetic robots learn to coordinate".
+CrossBot study, "Untethered cross-scale magnetic robots for retrievable delivery".
 CrossBot combines a millimeter-scale magnetic millicore with nanoscale magnetic
 nanounits and learns to coordinate millicore locomotion, nanounit locomotion,
 and assembly/disassembly under one shared rotating magnetic field.
